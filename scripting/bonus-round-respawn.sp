@@ -14,7 +14,7 @@ public Plugin myinfo = {
     name = "Bonus round respawn",
     author = "Dron-elektron",
     description = "Allows you to respawn players at the end of the round",
-    version = "0.1.0",
+    version = "1.0.0",
     url = "https://github.com/dronelektron/bonus-round-respawn"
 };
 
@@ -24,13 +24,13 @@ public void OnPluginStart() {
 }
 
 public void BonusRound_OnLoser(int client) {
-    if (UseCase_IsLosersMode() && !IsPlayerAlive(client)) {
-        RespawnPlayer(client);
+    if (UseCase_IsLosersMode()) {
+        RespawnPlayer(client, FORCE_RESPAWN_NO);
     }
 }
 
 public void BonusRound_OnWinner(int client) {
-    if (UseCase_IsWinnersMode() && !IsPlayerAlive(client)) {
-        RespawnPlayer(client);
+    if (UseCase_IsWinnersMode()) {
+        RespawnPlayer(client, FORCE_RESPAWN_NO);
     }
 }
