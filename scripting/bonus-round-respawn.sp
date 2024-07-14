@@ -24,13 +24,13 @@ public void OnPluginStart() {
 }
 
 public void BonusRound_OnLoser(int client) {
-    if (UseCase_IsLosersMode() && !IsPlayerAlive(client)) {
-        RespawnPlayer(client);
+    if (UseCase_IsLosersMode()) {
+        RespawnPlayer(client, FORCE_RESPAWN_NO);
     }
 }
 
 public void BonusRound_OnWinner(int client) {
-    if (UseCase_IsWinnersMode() && !IsPlayerAlive(client)) {
-        RespawnPlayer(client);
+    if (UseCase_IsWinnersMode()) {
+        RespawnPlayer(client, FORCE_RESPAWN_NO);
     }
 }
