@@ -1,7 +1,7 @@
 #include <sourcemod>
 
 #include "bonus-round-events/api"
-#include "player-respawn/api"
+#include "dod-hooks/api"
 
 #include "bonus-round-respawn/use-case"
 
@@ -25,12 +25,12 @@ public void OnPluginStart() {
 
 public void BonusRound_OnLoser(int client) {
     if (UseCase_IsLosersMode()) {
-        RespawnPlayer(client, FORCE_RESPAWN_NO);
+        Player_Respawn(client, FORCE_RESPAWN_NO);
     }
 }
 
 public void BonusRound_OnWinner(int client) {
     if (UseCase_IsWinnersMode()) {
-        RespawnPlayer(client, FORCE_RESPAWN_NO);
+        Player_Respawn(client, FORCE_RESPAWN_NO);
     }
 }
