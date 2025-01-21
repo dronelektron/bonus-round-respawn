@@ -14,7 +14,7 @@ public Plugin myinfo = {
     name = "Bonus round respawn",
     author = "Dron-elektron",
     description = "Allows you to respawn players at the end of the round",
-    version = "1.0.0",
+    version = "1.1.0",
     url = "https://github.com/dronelektron/bonus-round-respawn"
 };
 
