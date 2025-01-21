@@ -8,8 +8,6 @@
 #include "modules/console-variable.sp"
 #include "modules/use-case.sp"
 
-#define AUTO_CREATE_YES true
-
 public Plugin myinfo = {
     name = "Bonus round respawn",
     author = "Dron-elektron",
@@ -20,7 +18,7 @@ public Plugin myinfo = {
 
 public void OnPluginStart() {
     Variable_Create();
-    AutoExecConfig(AUTO_CREATE_YES, "bonus-round-respawn");
+    AutoExecConfig(_, "bonus-round-respawn");
 }
 
 public void BonusRound_OnLoser(int client) {
