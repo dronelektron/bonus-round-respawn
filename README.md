@@ -9,6 +9,8 @@ Allows you to respawn players at the end of the round
 ### Requirements
 
 * [SourceMod](https://www.sourcemod.net) 1.11 or later
+* [bonus-round-events](https://github.com/dronelektron/bonus-round-events)
+* [dod-hooks](https://github.com/dronelektron/dod-hooks)
 
 ### Installation
 
